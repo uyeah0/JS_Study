@@ -1,10 +1,15 @@
 "use strict"
 
+let a;
 function readNumber(){
-    let r = 0;
+    let r;
+    let msg;
     while(1){
-        let a = +prompt("수 입력:");
-        if( a === undefined || a == null ) r =null; break;
-        if( isFinite(a) == true) r = a; break;
+        a = +prompt("수 입력:");
+        if( a === null || a === ' ' ){
+            msg = null;break;
+        } 
+        else if( isFinite(a) == true) msg = a; break;
     }    
+    return msg;
 }
