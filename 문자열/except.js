@@ -2,6 +2,13 @@
 
 function checkSpam(str){
     if(!str) return str;
-    if(str.indexOf('XXX') != -1 || str.indexOf('viagra') != -1
+    let str2 = str.toUpperCase();
+    if(str2.includes('XXX') == true || str2.includes('VIAGRA') == true) {
+        return true;
+    }
+    
+    else return false;
 }
-checkSpam('buy ViAgRA now');
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam("innocent rabbit"));
