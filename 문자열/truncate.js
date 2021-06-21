@@ -2,10 +2,14 @@
 
 function truncate(str, maxlen){
     let str2 ="";
-    for(let i =0; i < maxlen; i++){
-        str2 += str[i];
+    if(str.length > maxlen){
+        for(let i =0; i < maxlen-1; i++){
+            str2 += str[i];
+        }
+        str2 += "...";
+    }else{
+        str2 += str.slice();
     }
-    str2 += "...";
     return str2;
 }
 
