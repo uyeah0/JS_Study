@@ -29,4 +29,3 @@ let room = {
     "place":{"number":23}
   }
   */
-  해답
